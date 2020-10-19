@@ -5,3 +5,7 @@
 </div>
 
 <img src="./landing_happy.png">
+
+run backend: yarn dev
+create migrations:
+yarn typeorm migration:revert

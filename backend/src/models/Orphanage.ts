@@ -13,7 +13,7 @@ export default class Orphanage {
   @Column()
   about: string;
   @Column()
-  intructions: string;
+  instructions: string;
   @Column()
   opening_hours: string;
   @Column()
