@@ -23,9 +23,21 @@ export class createImages1603249394745 implements MigrationInterface {
             type: "integer",
           },
         ],
+        foreignKeys: [
+          {
+            name: "ImageOrphanage",
+            columnNames: ["orphanage_id"],
+            referencedTableName: "orphanages",
+            referencedColumnNames: ["id"],
+            onUpdate: "CASCADE",
+            onDelete: "CASCADE",
+          },
+        ],
       })
     );
   }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {}
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropTable("images");
+  }
 }
