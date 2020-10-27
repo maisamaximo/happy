@@ -9,3 +9,5 @@
 run backend: yarn dev
 create migrations:
 yarn typeorm migration:revert
+
+we love code
